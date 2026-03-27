@@ -191,13 +191,38 @@
                     style="width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 12px;">Войти</button>
             </form>
 
+            <!-- Register Form -->
+            <form id="register-form" style="display: none;">
+                <div class="form-group-auth">
+                    <label>Имя и фамилия</label>
+                    <input type="text" class="form-control-auth" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group-auth">
+                    <label>Email</label>
+                    <input type="email" class="form-control-auth" placeholder="example@mail.ru" required>
+                </div>
+                <div class="form-group-auth">
+                    <label>Пароль</label>
+                    <input type="password" class="form-control-auth" placeholder="Минимум 8 символов" required>
+                </div>
+                <div class="form-group-auth">
+                    <label>Повторите пароль</label>
+                    <input type="password" class="form-control-auth" placeholder="Повторите пароль" required>
+                </div>
+                <div style="text-align: left; margin-bottom: 24px; font-size: 0.85rem; color: var(--text-muted);">
+                    Нажимая «Зарегистрироваться», вы соглашаетесь с <a href="terms.html" style="color: var(--primary);">правилами сервиса</a>.
+                </div>
+                <button type="submit" class="btn btn-primary btn-block"
+                    style="width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 12px;">Зарегистрироваться</button>
+            </form>
+
             <div class="fz-disclaimer">
                 Данный сайт является некоммерческим прототипом. Сбор и обработка персональных данных не осуществляются. 
                 Все вводимые данные используются только для демонстрации интерфейса и не сохраняются.
             </div>
 
             <div class="social-auth">
-                <div class="social-divider">или войти через</div>
+                <div class="social-divider">или через</div>
 
                 <!-- MAX Messenger Button -->
                 <button class="btn-social">
@@ -253,7 +278,7 @@
                 <button class="btn-social">
                     <svg class="svg-icon" viewBox="0 0 24 24">
                         <path fill="#000000"
-                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.24-.86 3.44-.8 1.57.14 2.82.72 3.84 1.83-3.12 1.89-2.58 6.09.68 7.4-1.12 2.37-2.12 3.89-3.04 3.74zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 11.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.24-.86 3.44-.8 1.57.14 2.82.72 3.84 1.83-3.12 1.89-2.58 6.09.68 7.4-1.12 2.37-2.12 3.89-3.04 3.74zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
                     </svg>
                     Apple
                 </button>
@@ -270,20 +295,34 @@
             document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
             document.getElementById('tab-' + tab).classList.add('active');
 
-            // This is just a UI stub for switching tabs seamlessly. 
-            // In a real app we'd toggle forms.
-            const btn = document.querySelector('#login-form button[type="submit"]');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+
             if (tab === 'register') {
-                btn.textContent = 'Зарегистрироваться';
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
             } else {
-                btn.textContent = 'Войти';
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
             }
         }
 
-        document.getElementById('login-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Успешно (демо-режим)');
-            window.location.href = 'index.html';
+        // Handle URL parameter sync
+        window.addEventListener('load', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const activeTab = urlParams.get('tab');
+            if (activeTab === 'register') {
+                switchTab('register');
+            }
+        });
+
+        const forms = ['login-form', 'register-form'];
+        forms.forEach(id => {
+            document.getElementById(id).addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Успешно (демо-режим)');
+                window.location.href = 'index.html';
+            });
         });
     </script>
 </body>

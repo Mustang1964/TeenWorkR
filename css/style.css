@@ -1207,7 +1207,8 @@ p {
     
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
-    .employer-benefits { flex-direction: row; gap: 40px; }
+    .employer-benefits { flex-direction: row; gap: 40px; justify-content: center; }
+    .cta-box .hero-buttons { justify-content: center; }
     
     .feature-card {
         padding: 32px;
@@ -1328,6 +1329,9 @@ p {
 
     .cta-box {
         padding: 64px;
+    }
+    .cta-box .hero-buttons {
+        justify-content: center;
     }
 
     .search-header { flex-direction: row; }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партнерство | TeenWork</title>
+    <meta name="description"
+        content="Станьте партнером TeenWork: развивайте молодежное предпринимательство, поддерживайте таланты и создавайте безопасную среду для первого трудового опыта.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .partner-card {
+            padding: 40px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .partner-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 24px;
+        }
+
+        .contact-section {
+            background: var(--secondary);
+            color: white;
+            padding: 80px 0;
+            margin-top: 80px;
+            border-radius: var(--radius-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section h2, .contact-section p {
+            color: white;
+        }
+
+        .contact-form-inline {
+            display: flex;
+            gap: 16px;
+            max-width: 600px;
+            margin: 32px auto 0;
+        }
+
+        @media (max-width: 600px) {
+            .contact-form-inline {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="TeenWork Logo" class="logo-img"
+                    onerror="this.style.display='none'; document.getElementById('logo-text-hdr').style.display='inline-flex';">
+                <span class="logo-text" id="logo-text-hdr" style="display: none;"><span
+                        class="text-yellow">Teen</span><span class="text-black">Work</span></span>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html#features" class="nav-link">Преимущества</a>
+                <a href="knowledge-base.html" class="nav-link">Обучение</a>
+                <a href="employers.html" class="nav-link">Работодателям</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="auth.html" class="btn btn-outline">Войти</a>
+                <a href="auth.html" class="btn btn-primary">Начать</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="min-height: 60vh; padding-top: 140px;">
+            <div class="bg-glow-container">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-3"></div>
+            </div>
+            <div class="container text-center">
+                <div class="badge">Для организаций</div>
+                <h1 class="hero-title">Создаем будущее <br><span class="text-gradient">вместе</span></h1>
+                <p class="section-subtitle mx-auto" style="max-width: 700px;">
+                    TeenWork — это не просто биржа. Это экосистема, где бизнес, образование и государство объединяются для поддержки молодежи на старте карьеры.
+                </p>
+                <div class="hero-buttons justify-center mt-4" style="justify-content: center;">
+                    <a href="#contact" class="btn btn-primary btn-lg">Стать партнером</a>
+                    <a href="index.html" class="btn btn-outline btn-lg">О проекте</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Направления сотрудничества</h2>
+                    <p class="section-subtitle">Выберите формат, который подходит вашей организации</p>
+                </div>
+
+                <div class="partnership-grid">
+                    <div class="partner-card glass-panel reveal-on-scroll">
+                        <i class="ph-duotone ph-buildings partner-icon"></i>
+                        <h3>Для бизнеса</h3>
+                        <p>Масштабируйте HR-бренд, находите талантливых стажеров и реализуйте проекты КСО (корпоративной социальной ответственности). Мы предоставляем доступ к мотивированной молодежи.</p>
+                        <ul class="benefit-list" style="margin-top: 20px;">
+                            <li><i class="ph-fill ph-check-circle"></i> Интеграция в экосистему</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Брендированные вакансии</li>
+                        </ul>
+                    </div>
+
+                    <div class="partner-card glass-panel reveal-on-scroll" style="transition-delay: 0.1s;">
+                        <i class="ph-duotone ph-graduation-cap partner-icon"></i>
+                        <h3>ВУЗам и колледжам</h3>
+                        <p>Помогайте своим студентам находить первую работу и стажировки. Мы интегрируем ваши образовательные программы в нашу базу знаний и помогаем с трудоустройством выпускников.</p>
+                        <ul class="benefit-list" style="margin-top: 20px;">
+                            <li><i class="ph-fill ph-check-circle"></i> Цифровое портфолио</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Совместные курсы</li>
+                        </ul>
+                    </div>
+
+                    <div class="partner-card glass-panel reveal-on-scroll" style="transition-delay: 0.2s;">
+                        <i class="ph-duotone ph-bank partner-icon"></i>
+                        <h3>Госпартнерство</h3>
+                        <p>Реализуйте программы занятости молодежи и поддержки самозанятости в регионе через проверенный технологический стек TeenWork. Безопасно и прозрачно.</p>
+                        <ul class="benefit-list" style="margin-top: 20px;">
+                            <li><i class="ph-fill ph-check-circle"></i> Безопасность (152-ФЗ)</li>
+                            <li><i class="ph-fill ph-check-circle"></i> Аналитика рынка труда</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <div class="contact-section text-center reveal-on-scroll">
+                <div class="bg-glow-container">
+                    <div class="glow-orb orb-2" style="opacity: 0.2;"></div>
+                </div>
+                <h2>Обсудим варианты?</h2>
+                <p>Оставьте почту, и мы пришлем презентацию партнерских программ TeenWork 2026.</p>
+                
+                <form class="contact-form-inline" id="partnership-form">
+                    <input type="email" class="btn btn-outline" style="background: white; flex: 1; text-align: left; cursor: text;" placeholder="Ваш Email" required>
+                    <button type="submit" class="btn btn-primary">Отправить заявку</button>
+                </form>
+                
+                <div id="form-result" style="display: none; margin-top: 24px;">
+                    <p style="color: var(--primary); font-weight: 600;"><i class="ph-bold ph-check-circle"></i> Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="fz-disclaimer">
+                Данный сайт является некоммерческим прототипом. Сбор и обработка персональных данных не осуществляются. 
+                Все вводимые данные используются только для демонстрации интерфейса и не сохраняются.
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TeenWork. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('partnership-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('form-result').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
