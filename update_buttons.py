@@ -2,8 +2,8 @@ import os
 import re
 
 files_to_update = [
-    'terms.html', 'rules.html', 'pro.html', 'knowledge-base.html', 'jobs.html',
-    'jobs-shifts.html', 'jobs-one-time.html', 'internships.html', 'insurance.html',
+    'terms.html', 'rules.html', 'knowledge-base.html', 'jobs.html',
+    'jobs-shifts.html', 'jobs-one-time.html', 'internships.html',
     'index.html', 'employers.html'
 ]
 

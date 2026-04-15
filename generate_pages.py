@@ -175,34 +175,6 @@ pages = {
         </section>
         '''
     },
-    'pro.html': {
-        'title': 'TeenWork Pro | TeenWork',
-        'content': '''
-        <section class="hero" style="min-height: 50vh; padding-top: 120px;">
-            <div class="bg-glow-container">
-                <div class="glow-orb orb-3"></div>
-            </div>
-            <div class="container text-center">
-                <div class="badge badge-dark" style="background: var(--primary); color: var(--secondary);">Премиум</div>
-                <h1 class="section-title">TeenWork <span class="text-gradient">PRO</span></h1>
-                <p class="section-subtitle mx-auto" style="max-width: 600px;">Получай больше заказов, выделяйся среди откликов и прокачивай навыки быстрее всего за 350 ₽ в месяц.</p>
-            </div>
-        </section>
-        <section class="section pt-0">
-            <div class="container" style="max-width: 800px;">
-                <div class="glass-panel" style="padding: 48px; text-align: center; border: 2px solid var(--primary); box-shadow: 0 20px 40px rgba(255, 184, 0, 0.2);">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">350 ₽ <span style="font-size: 1rem; color: var(--text-muted);">/ месяц</span></h2>
-                    <ul class="benefit-list" style="text-align: left; max-width: 400px; margin: 0 auto 32px auto;">
-                        <li><i class="ph-fill ph-check-circle"></i><div><strong>PRO-статус в профиле</strong><p>Заказчики видят вас в топе поиска.</p></div></li>
-                        <li><i class="ph-fill ph-check-circle"></i><div><strong>Сниженная комиссия</strong><p>Комиссия сервиса ниже на 2%.</p></div></li>
-                        <li><i class="ph-fill ph-check-circle"></i><div><strong>Безлимитные отклики</strong><p>Откликайся на любое количество заданий.</p></div></li>
-                    </ul>
-                    <button class="btn btn-primary btn-lg btn-block" style="max-width: 400px; margin: 0 auto;">Оформить подписку</button>
-                </div>
-            </div>
-        </section>
-        '''
-    },
     'knowledge-base.html': {
         'title': 'База знаний | TeenWork',
         'content': '''
@@ -264,34 +236,6 @@ pages = {
                     <p class="mb-4">Запрещается публикация заданий, нарушающих законодательство РФ, а также заданий, связанных с рисками для жизни и здоровья.</p>
                     <h2 class="mt-4">3. Ответственность</h2>
                     <p class="mb-4">Обе стороны обязаны соблюдать договоренности. В случае споров администрация платформы выступает арбитром.</p>
-                </div>
-            </div>
-        </section>
-        '''
-    },
-    'insurance.html': {
-        'title': 'Страховой фонд | TeenWork',
-        'content': '''
-        <section class="hero" style="min-height: 40vh; padding-top: 120px;">
-            <div class="bg-glow-container">
-                <div class="glow-orb orb-1" style="background: radial-gradient(circle, rgba(16, 185, 129, 0.3), transparent 70%);"></div>
-            </div>
-            <div class="container text-center">
-                <h1 class="section-title">Страховой <span class="text-gradient">фонд</span></h1>
-                <p class="section-subtitle mx-auto" style="max-width: 600px;">Твоя гарантия оплаты труда. Мы возвращаем деньги, если заказчик оказался недобросовестным.</p>
-            </div>
-        </section>
-        <section class="section pt-0">
-            <div class="container" style="max-width: 800px;">
-                <div class="features-grid">
-                    <div class="glass-panel" style="padding: 32px; text-align: center;">
-                        <span style="font-size: 3rem; font-weight: 800; color: var(--success);">5%</span>
-                        <p>С каждой транзакции отчисляется в фонд платформы</p>
-                    </div>
-                    <div class="glass-panel" style="padding: 32px; text-align: center;">
-                        <span style="font-size: 3rem; font-weight: 800; color: var(--success);">100%</span>
-                        <p>Компенсация в случае доказанного обмана со стороны заказчика</p>
-                    </div>
                 </div>
             </div>
         </section>
