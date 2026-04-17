@@ -266,7 +266,7 @@ pages = {
 
 for filename, data in pages.items():
     # Update title in header
-    page_header = header.replace('<title>TeenWork | Безопасная работа и стажировки для молодежи</title>', f'<title>{data["title"]}</title>')
+    page_header = header.replace('<title>TeenWork | Безопасная работа и заказы для молодежи</title>', f'<title>{data["title"]}</title>')
     
     # Assemble page
     full_html = page_header + '<main>\n' + data['content'] + '\n    </main>' + footer
