@@ -5,11 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация | TeenWork</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -211,7 +206,18 @@
                     <input type="password" class="form-control-auth" placeholder="Повторите пароль" required>
                 </div>
                 <div style="text-align: left; margin-bottom: 24px; font-size: 0.85rem; color: var(--text-muted);">
-                    Нажимая «Зарегистрироваться», вы соглашаетесь с <a href="Публичная оферта (Пользовательское соглашение) платформы TeenWork.pdf" target="_blank" style="color: var(--primary);">Пользовательским соглашением</a>.
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+                        <input type="checkbox" id="agree-terms" required style="margin-top: 4px;">
+                        <label for="agree-terms" style="cursor: pointer;">Я ознакомился(-лась) и принимаю условия <a href="Публичная оферта (Пользовательское соглашение) платформы TeenWork.pdf" target="_blank" style="color: var(--primary);">Пользовательского соглашения</a></label>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 12px;">
+                        <input type="checkbox" id="agree-privacy" required style="margin-top: 4px;">
+                        <label for="agree-privacy" style="cursor: pointer;">Я даю согласие на обработку моих персональных данных в соответствии с <a href="Политика конфиденциальности TeenWork.pdf" target="_blank" style="color: var(--primary);">Политикой конфиденциальности</a></label>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 8px;">
+                        <input type="checkbox" id="agree-parent" style="margin-top: 4px;">
+                        <label for="agree-parent" style="cursor: pointer;">Я подтверждаю, что мой законный представитель (родитель/опекун) уведомлён о моей регистрации на платформе и даёт согласие на обработку моих персональных данных (для пользователей 14–17 лет)</label>
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block"
                     style="width: 100%; padding: 16px; font-size: 1.1rem; border-radius: 12px;">Зарегистрироваться</button>
